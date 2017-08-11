@@ -17,14 +17,15 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import junit.framework.TestCase;
 
 public class EbayAdvancedSearch extends TestCase {
-	WebDriver driver=null;
+
 	@Before
 	public void setUpBefore(){
-		 driver = new HtmlUnitDriver();
+		assertTrue( true );
 	}
 	
 	@Test
 	public void setUp() throws Exception {
+		WebDriver  driver = new HtmlUnitDriver();
 		  driver.get("http://www.google.com");			
 		  // Locate the searchbox using its name		
           WebElement element = driver.findElement(By.name("q"));	
@@ -44,7 +45,7 @@ public class EbayAdvancedSearch extends TestCase {
 	}
 	@After
 	public void getDestroy(){
-		driver.close();
+		assertTrue( true );
 	}
 	
 	
