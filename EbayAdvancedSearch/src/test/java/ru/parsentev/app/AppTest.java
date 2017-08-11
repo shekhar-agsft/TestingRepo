@@ -30,7 +30,7 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( AppTest.class,EbayAdvancedSearch.class );
     }
 
     /**
@@ -38,24 +38,7 @@ public class AppTest
      */
     public void testApp()
     {
-    	 WebDriver driver = new HtmlUnitDriver();
-    		
-    			  driver.get("http://www.google.com");			
-    			  // Locate the searchbox using its name		
-    	          WebElement element = driver.findElement(By.name("q"));	
-    	          
-    	         // Enter a search query		
-    	         element.sendKeys("Guru99");	
-    	        
-    	         // Submit the query. Webdriver searches for the form using the text input element automatically		
-    	         // No need to locate/find the submit button		
-    	         element.submit();			
-    	         
-    	 		// This code will print the page title		
-    	         System.out.println("Page title is: " + driver.getTitle());		
-    	         
-    	         driver.quit();		
-    			//selenium = new WebDriverBackedSelenium(driver, baseUrl);
-        //assertTrue( true );
+    	
+        assertTrue( true );
     }
 }

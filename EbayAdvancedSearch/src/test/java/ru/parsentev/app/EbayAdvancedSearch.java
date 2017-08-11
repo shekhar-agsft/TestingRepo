@@ -3,21 +3,26 @@ package ru.parsentev.app;
 
 
 import org.junit.After;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 
 
 import org.openqa.selenium.By;		
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;	
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-import junit.framework.TestCase;		
-public class EbayAdvancedSearch extends TestCase {			
-	 WebDriver driver = new HtmlUnitDriver();
+
+import junit.framework.TestCase;
+
+public class EbayAdvancedSearch extends TestCase {
+	WebDriver driver=null;
+	@Before
+	public void setUpBefore(){
+		 driver = new HtmlUnitDriver();
+	}
+	
 	@Test
 	public void setUp() throws Exception {
 		  driver.get("http://www.google.com");			
@@ -37,7 +42,10 @@ public class EbayAdvancedSearch extends TestCase {
          driver.quit();		
 		//selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
-	
+	@After
+	public void getDestroy(){
+		driver.close();
+	}
 	
 	
 		
