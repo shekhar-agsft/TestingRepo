@@ -13,8 +13,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.By;		
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;	
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;		
-public class EbayAdvancedSearch {			
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import junit.framework.TestCase;		
+public class EbayAdvancedSearch extends TestCase {			
 	 WebDriver driver = new HtmlUnitDriver();
 	@Test
 	public void setUp() throws Exception {
@@ -35,6 +37,8 @@ public class EbayAdvancedSearch {
          driver.quit();		
 		//selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
+	
+	
 	
 		
 }
